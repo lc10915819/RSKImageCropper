@@ -201,6 +201,12 @@ static const CGFloat kK = 0;
   }
 }
 
+- (void)setFixLabelHeight:(NSInteger)fixLabelHeight {
+  _fixLabelHeight = fixLabelHeight;
+
+  [self updateViewConstraints];
+}
+
 - (void)updateViewConstraints {
   [super updateViewConstraints];
 
@@ -347,6 +353,8 @@ static const CGFloat kK = 0;
     _moveAndScaleLabel.text = @"N/A";
     _moveAndScaleLabel.textColor = [UIColor whiteColor];
     _moveAndScaleLabel.opaque = NO;
+    _moveAndScaleLabel.font = [UIFont systemFontOfSize:18];
+    _moveAndScaleLabel.textColor = [UIColor whiteColor];
   }
   return _moveAndScaleLabel;
 }
@@ -360,6 +368,9 @@ static const CGFloat kK = 0;
                       action:@selector(onCancelButtonTouch:)
             forControlEvents:UIControlEventTouchUpInside];
     _cancelButton.opaque = NO;
+    _cancelButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [_cancelButton setTitleColor:[UIColor whiteColor]
+                        forState:UIControlStateNormal];
   }
   return _cancelButton;
 }
@@ -373,6 +384,13 @@ static const CGFloat kK = 0;
                       action:@selector(onChooseButtonTouch:)
             forControlEvents:UIControlEventTouchUpInside];
     _chooseButton.opaque = NO;
+
+    _chooseButton.titleLabel.font = [UIFont systemFontOfSize:15];
+    [_chooseButton setTitleColor:[UIColor colorWithRed:255.0 / 255.0
+                                                 green:51.0 / 255.0
+                                                  blue:51.0 / 255.0
+                                                 alpha:1]
+                        forState:UIControlStateNormal];
   }
   return _chooseButton;
 }
