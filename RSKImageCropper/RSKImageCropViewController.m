@@ -70,9 +70,6 @@ static const CGFloat kK = 0;
 @property(readonly, nonatomic) CGRect rectForMaskPath;
 @property(readonly, nonatomic) CGRect rectForClipPath;
 
-@property(strong, nonatomic) UIButton *cancelButton;
-@property(strong, nonatomic) UIButton *chooseButton;
-
 @property(strong, nonatomic) UITapGestureRecognizer *doubleTapGestureRecognizer;
 @property(strong, nonatomic)
     UIRotationGestureRecognizer *rotationGestureRecognizer;
@@ -287,14 +284,14 @@ static const CGFloat kK = 0;
   } else {
     if ([self isPortraitInterfaceOrientation]) {
       self.moveAndScaleLabelTopConstraint.constant =
-          kPortraitMoveAndScaleLabelVerticalMargin + 7;
+          kPortraitMoveAndScaleLabelVerticalMargin + _fixLabelHeight;
       self.cancelButtonBottomConstraint.constant =
           kPortraitMoveAndScaleLabelVerticalMargin;
       self.chooseButtonBottomConstraint.constant =
           kPortraitMoveAndScaleLabelVerticalMargin;
     } else {
       self.moveAndScaleLabelTopConstraint.constant =
-          kLandscapeMoveAndScaleLabelVerticalMargin + 7;
+          kLandscapeMoveAndScaleLabelVerticalMargin + _fixLabelHeight;
       self.cancelButtonBottomConstraint.constant =
           kPortraitMoveAndScaleLabelVerticalMargin;
       self.chooseButtonBottomConstraint.constant =

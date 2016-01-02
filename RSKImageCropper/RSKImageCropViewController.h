@@ -191,12 +191,14 @@ typedef NS_ENUM(NSUInteger, RSKImageCropMode) {
 /**
  The Cancel Button.
  */
-@property(strong, nonatomic, readonly) UIButton *cancelButton;
+@property(strong, nonatomic) UIButton *cancelButton;
 
 /**
  The Choose Button.
  */
-@property(strong, nonatomic, readonly) UIButton *chooseButton;
+@property(strong, nonatomic) UIButton *chooseButton;
+
+@property(assign, nonatomic) NSInteger fixLabelHeight;
 
 /// -------------------------------------------
 /// @name Checking of the Interface Orientation
