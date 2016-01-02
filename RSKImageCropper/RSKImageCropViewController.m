@@ -95,7 +95,7 @@ static const CGFloat kK = 0;
     _applyMaskToCroppedImage = NO;
     _maskLayerLineWidth = 1.0;
     _rotationEnabled = NO;
-    _cropMode = RSKImageCropModeCircle;
+    _cropMode = RSKImageCropModeSquare;
   }
   return self;
 }
