@@ -379,7 +379,7 @@ static const CGFloat kK = 0;
   if (!_chooseButton) {
     _chooseButton = [[UIButton alloc] init];
     _chooseButton.translatesAutoresizingMaskIntoConstraints = NO;
-    [_chooseButton setTitle:@"下一张" forState:UIControlStateNormal];
+    [_chooseButton setTitle:@"选取" forState:UIControlStateNormal];
     [_chooseButton addTarget:self
                       action:@selector(onChooseButtonTouch:)
             forControlEvents:UIControlEventTouchUpInside];
